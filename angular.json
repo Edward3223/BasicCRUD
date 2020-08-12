@@ -117,8 +117,16 @@
               "devServerTarget": "ProjectV:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {}
         }
       }
-    }},
-  "defaultProject": "ProjectV"
+    }
+  },
+  "defaultProject": "ProjectV",
+  "cli": {
+    "analytics": false
+  }
 }

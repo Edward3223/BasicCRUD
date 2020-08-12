@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+
+
+    <div class="contenedor">
+
+        <div>
+            <div class="card cardAddProduct" style="width: 18rem;">
+                <h5 style="text-align: center;" class="card-title">Agrega tus productitos</h5>
+                <div class="card-body">
+                    <form>
+                        <div class="form-group">
+                          <label style="color: #34bb34;" for="exampleFormControlInput1"><b>Producto</b></label>
+                          <input [(ngModel)]="SetProduct.Nombre" [ngModelOptions]="{standalone: true}" type="text" class="form-control" id="exampleFormControlInput1" placeholder="Manzana">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleFormControlInput1"> <b>Precio</b></label>
+                            <input [(ngModel)]="SetProduct.Precio" [ngModelOptions]="{standalone: true}" type="text" class="form-control" id="exampleFormControlInput1" placeholder="10$">
+                          </div>
+                      </form>
+                      <button (click)="setProduct()" class="btn btn-success" >Guardar</button>
+                </div>
+              </div>
+        </div>
+
+        <div>
+            <table class="tabletIten table table-light">
+                <thead>
+                  <tr>
+                    <th scope="col">Nombre
+                    <th scope="col">Precio</th>
+                  </tr>
+                </thead>
+                <tbody *ngFor="let item of Product">
+                  <tr>
+                    <td>{{item.Nombre}}</td>
+                    <td>{{item.Precio}}</td>
+                  </tr>
+                </tbody>
+              </table>
+        </div>
+
+
+    </div>
+
+
+</body>
+</html>
